@@ -13,6 +13,8 @@
 		31CD35682650D3AC00EE69D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31CD35662650D3AC00EE69D0 /* Main.storyboard */; };
 		31CD356A2650D3AD00EE69D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31CD35692650D3AD00EE69D0 /* Assets.xcassets */; };
 		31CD356D2650D3AD00EE69D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31CD356B2650D3AD00EE69D0 /* LaunchScreen.storyboard */; };
+		31CD35772650FF1C00EE69D0 /* SwiftTryCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CD35762650FF1C00EE69D0 /* SwiftTryCatch.m */; };
+		31CD357C2650FF7D00EE69D0 /* String+calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CD357B2650FF7D00EE69D0 /* String+calculate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		31CD35692650D3AD00EE69D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31CD356C2650D3AD00EE69D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31CD356E2650D3AD00EE69D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31CD35742650FEFB00EE69D0 /* SwiftTryCatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftTryCatch.h; sourceTree = "<group>"; };
+		31CD35752650FF1B00EE69D0 /* Calculator-UIKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calculator-UIKit-Bridging-Header.h"; sourceTree = "<group>"; };
+		31CD35762650FF1C00EE69D0 /* SwiftTryCatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftTryCatch.m; sourceTree = "<group>"; };
+		31CD357B2650FF7D00EE69D0 /* String+calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+calculate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,43 @@
 		31CD355F2650D3AC00EE69D0 /* Calculator-UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				31CD35602650D3AC00EE69D0 /* AppDelegate.swift */,
-				31CD35622650D3AC00EE69D0 /* SceneDelegate.swift */,
-				31CD35642650D3AC00EE69D0 /* ViewController.swift */,
+				31CD357A2650FF4800EE69D0 /* SupportingFiles */,
+				31CD35792650FF4100EE69D0 /* Calculator */,
+				31CD35782650FF2D00EE69D0 /* Utils */,
 				31CD35662650D3AC00EE69D0 /* Main.storyboard */,
-				31CD35692650D3AD00EE69D0 /* Assets.xcassets */,
 				31CD356B2650D3AD00EE69D0 /* LaunchScreen.storyboard */,
 				31CD356E2650D3AD00EE69D0 /* Info.plist */,
+				31CD35752650FF1B00EE69D0 /* Calculator-UIKit-Bridging-Header.h */,
 			);
 			path = "Calculator-UIKit";
+			sourceTree = "<group>";
+		};
+		31CD35782650FF2D00EE69D0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				31CD35762650FF1C00EE69D0 /* SwiftTryCatch.m */,
+				31CD35742650FEFB00EE69D0 /* SwiftTryCatch.h */,
+				31CD357B2650FF7D00EE69D0 /* String+calculate.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		31CD35792650FF4100EE69D0 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				31CD35642650D3AC00EE69D0 /* ViewController.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		31CD357A2650FF4800EE69D0 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				31CD35622650D3AC00EE69D0 /* SceneDelegate.swift */,
+				31CD35602650D3AC00EE69D0 /* AppDelegate.swift */,
+				31CD35692650D3AD00EE69D0 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +132,7 @@
 				TargetAttributes = {
 					31CD355C2650D3AC00EE69D0 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -138,6 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				31CD35652650D3AC00EE69D0 /* ViewController.swift in Sources */,
+				31CD35772650FF1C00EE69D0 /* SwiftTryCatch.m in Sources */,
+				31CD357C2650FF7D00EE69D0 /* String+calculate.swift in Sources */,
 				31CD35612650D3AC00EE69D0 /* AppDelegate.swift in Sources */,
 				31CD35632650D3AC00EE69D0 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,15 +323,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V5TCWUQY9;
 				INFOPLIST_FILE = "Calculator-UIKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "TJSSE.Calculator-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Calculator-UIKit/Calculator-UIKit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,15 +346,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V5TCWUQY9;
 				INFOPLIST_FILE = "Calculator-UIKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "TJSSE.Calculator-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Calculator-UIKit/Calculator-UIKit-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
