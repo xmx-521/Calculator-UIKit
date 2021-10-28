@@ -8,8 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    
     @IBAction func tapAC(_ sender: UIButton) {
         currentString.text = ""
         isEntering = false
@@ -28,7 +26,14 @@ class ViewController: UIViewController {
     @IBAction func tapCompute(_ sender: UIButton) {
         if let string = currentString.text {
             if let num = string.calculate() {
-                currentString.text = string+" = \(num)"
+                let roundedNum = round(num)
+                var printNum = 0
+                if roundedNum == num {
+                    printNum = Int(num)
+                    currentString.text = string + " = \(printNum)"
+                } else {
+                    currentString.text = string + " = \(num)"
+                }
             } else {
                 currentString.text = "ERROR"
             }
@@ -48,7 +53,6 @@ class ViewController: UIViewController {
     }
     
     var isEntering = false
-    
     @IBOutlet weak var currentString: UILabel!
 }
 

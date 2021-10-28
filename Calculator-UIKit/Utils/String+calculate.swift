@@ -8,9 +8,9 @@
 import Foundation
 
 extension String {
-
+    
     private func allNumsToDouble() -> String {
-
+        
         let symbolsCharSet = ".,"
         let fullCharSet = "0123456789" + symbolsCharSet
         var i = 0
@@ -40,7 +40,7 @@ extension String {
         }
         return result
     }
-
+    
     func calculate() -> Double? {
         let transformedString = allNumsToDouble()
         var answer: Double?
@@ -49,8 +49,8 @@ extension String {
             answer =  expr.expressionValue(with: nil, context: nil) as? Double
         }, catch: { (error) in
             answer = nil
-             }, finallyBlock: {
-
+        }, finallyBlock: {
+            
         })
         return answer
     }
